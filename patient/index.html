@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Sign-In</title>
+    <link rel="stylesheet" href="assets/css/simple.min.css">
+</head>
+
+<body id="body">
+
+    <div class="signin-container">
+        <h2>Patient Sign-In</h2>
+        <form id="signinForm" action="dashboard.html" method="" onsubmit="return validateForm()">
+            <input type="text" id="patientId" name="patientId" placeholder="Patient Number / ID" >
+            <input type="password" id="password" name="password" placeholder="Phone Number (default password)">
+            <button type="submit">Sign In</button>
+        </form>
+        <div class="error-message" id="errorMessage"></div>
+        <a href="forgot-password.html">Forgot Password?</a>
+    </div>
+
+    <script>
+        function validateForm() {
+            var patientId = document.getElementById('patientId').value;
+            var password = document.getElementById('password').value;
+            var errorMessage = document.getElementById('errorMessage');
+
+            // Basic validation to check if fields are not empty
+            if (patientId === '' || password === '') {
+                errorMessage.textContent = 'Please fill in all fields.';
+                return false;
+            }
+
+            // Additional validation can be added here (e.g., pattern matching for phone numbers)
+
+            // If validation passes, the form can be submitted
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>

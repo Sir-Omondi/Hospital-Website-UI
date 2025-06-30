@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/font-awesome-4.7.0.min.css">
+</head>
+
+<body>
+<!--header starts -->
+
+<header class="header">
+
+    <section class="flex">
+ 
+       <a href="home.html" class="logo">Life Comforter Hospital</a>
+ 
+        <form action="search_page.php" method="post" class="search-form">
+          <input type="text" name="search" placeholder="search here..." required maxlength="100">
+          <button type="submit" class="fas fa-search" name="search_btn"></button>
+       </form> 
+ 
+       <div class="icons">
+          <div id="menu-btn" class="fas fa-bars"></div>
+          <div id="search-btn" class="fas fa-bars"></div>
+          <div id="user-btn" class="fas fa-bars"></div>
+          <div id="toggle-btn" class="fas fa-bars"></div>
+       </div>
+ 
+        <div class="profile">
+          <img src="../assets/images/avatar.jpeg" alt="">
+          <h3>Kevin Omondi Wanzala</h3>
+          <span>Developer</span>
+          <a href="profile.php" class="btn">view profile</a>
+          <div class="flex-btn">
+             <a href="login.php" class="option-btn">login</a>
+             <a href="register.php" class="option-btn">register</a>
+          </div>
+          <a href="../components/admin_logout.php" onclick="return confirm('logout from Coding Arena website?');" class="delete-btn">logout</a>
+          
+       </div> 
+ 
+      
+    </section>
+ 
+ </header>
+ 
+ <!-- header section ends -->
+ 
+ <!-- side bar section starts  -->
+ 
+ <div class="side-bar">
+ 
+    <div class="close-side-bar">
+       <i class="fas fa-times"></i>
+    </div>
+ 
+     <div class="profile">
+          <img src="../assets/images/avatar.jpeg" alt="">
+          <h3>Kevin Omondi Wanzala</h3>
+          <span>Developer</span>
+          <a href="profile.php" class="btn">view profile</a>         
+       </div> 
+ 
+    <nav class="navbar">
+       <a href="dashboard.html" class="active"><i class="fas fa-home"></i><span>Home</span></a>
+       <a href=""><i class="fas fa-book-medical"></i><span>Services</span></a>
+       <a href=""><i class="fas fa-graduation-cap"></i><span>Departments</span></a>
+       <a href=""><i class="fas fa-comment"></i><span>Our Doctors</span></a>
+       <a href=""><i class="fas fa-message"></i><span>Contact Us</span></a>
+       <a href="app.html"><i class="fas fa-message"></i><span>Appointments</span></a>
+       <a href="../index.html"><i class="fas fa-message"></i><span>Hospital Portal</span></a>
+       <a href="#" onclick="return confirm('Do you want to leave?');"><i class="fas fa-right-from-bracket"></i><span>Logout</span></a>
+    </nav>
+ 
+ </div>
+ <!-- body sections starts here -->
+
+    
+    
+    <div class="container">
+        <h1 class="heading">Welcome, Kevin Omondi</h1>
+        <div class="grid-container">
+
+            <!-- Appointments Card -->
+            <div class="card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Upcoming Appointments</h3>
+                <p>You have 2 upcoming appointments.</p>
+                <a class="btn" href="appointments.html">View Details</a>
+            </div>
+
+            
+
+            <!-- Medical Records Card -->
+            <div class="card">
+                <i class="fas fa-notes-medical"></i>
+                <h3>Medical Records</h3>
+                <p>Access your past consultations and lab results.</p>
+                <a class="btn" href="medical-records.html">View Records</a>
+            </div>
+
+            <!-- Billing Card -->
+            <div class="card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Billing & Payments</h3>
+                <p>You have 1 unpaid bill.</p>
+                <a class="btn" href="billing.html">Pay Now</a>
+            </div>
+
+            <!-- Messages Card -->
+            <div class="card">
+                <i class="fas fa-envelope"></i>
+                <h3>Messages</h3>
+                <p>You have 3 new messages from your doctor.</p>
+                <a class="btn" href="messages.html">Read Messages</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Life Comforter Hospital. All Rights Reserved.</p>
+     </footer>
+<script src="../assets/js/all.min.js"></script>
+</body>
+
+</html>
